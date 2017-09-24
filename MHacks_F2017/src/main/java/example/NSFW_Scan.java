@@ -89,7 +89,7 @@ public class NSFW_Scan {
 				SafeSearchAnnotation annotation = res.getSafeSearchAnnotation();
 				System.out.println("adult: " + annotation.getAdult());
 
-				if(annotation.getAdultValue() > 3) {
+				if(annotation.getAdultValue() >= 3) {
 					numNSFWInARow++;
 					System.out.println("BAD THINGS");
 					return true;
