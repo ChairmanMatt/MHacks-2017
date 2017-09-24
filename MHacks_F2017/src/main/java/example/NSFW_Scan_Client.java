@@ -10,11 +10,11 @@ public class NSFW_Scan_Client {
 			if(scanner.detectUnsafeSearch(bts)) {
 				scanner.saveImage(bts);
 			}
-//			if(scanner.getNumNSFWInARow() > 3) {
+			if(scanner.getNumNSFWInARow() > 3) {
 				System.out.println(Audio.getMasterOutputMute());
 				Audio.setMasterOutputMute(false);
 				Audio.setMasterOutputVolume(1);
-//			}
+			}
 		}
 	}
 }
